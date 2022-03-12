@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div {
+  padding: 15px;
+}
+
+/* nav */
+.input {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+  width: 350px;
+  height: 25px;
+}
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #d8d2cb;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #398ab9;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #111;
+  background: #fff;
+}
+
+/* slide */
+.tbslide-one {
+  height: 720px;
+}
+.tbslide-one > tbody > tr > td {
+  width: 50%;
+}
+.tbslide-one img {
+  float: left;
+}
+.tbslide-one > tbody > tr > td > img {
+  width: 100%;
+  height: 100%;
+}
+.content {
+  align-items: center;
+  padding: 0px 0px 64px 64px;
+  font-size: 22px;
+}
+
+/* foto */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+}
+.grid img {
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+}
+#porfolio h2 {
+  text-align: center;
+  font-size: 2em;
+}
+#team h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+/*service */
+#service h2 {
+  text-align: center;
+  font-size: 2em;
+}
+.tbservice > p {
+  padding: 1rem;
+}
+.tbservice > table {
+  padding: 25px;
+}
+.tbservice > table > tbody > tr > td {
+  padding: 25px;
+}
+/* font awesome */
+.fa-solid {
+  font-size: 8rem;
+  color: #398ab9;
+}
+a {
+  text-decoration: none;
+}
+/* button */
+button {
+  padding: 15px 40px;
+  background: #000;
+  border: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: helvetica;
+  font-size: 12px;
+  letter-spacing: 3px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+}
+
+button::after,
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+button::after {
+  width: 30px;
+  height: 1px;
+  background: white;
+  transform: translateX(-3px);
+  margin-top: 0px;
+}
+
+button::before {
+  content: "";
+  transform: rotate(-135deg) translateX(50%);
+  width: 11px;
+  height: 11px;
+  background: transparent;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-top: -1px;
+}
+
+button:hover {
+  padding: 15px 60px 15px 20px;
+}
+
+button:hover::after,
+button:hover::before {
+  opacity: 1;
+  right: 15px;
+}
+/*contact us */
+
+#contact {
+  background: url(https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_960_720.jpg)
+    no-repeat center fixed;
+  background-size: cover;
+  height: 1024;
+}
+.divcontact {
+  background-color: white;
+  width: 720px;
+  margin: 0 auto;
+}
+.divcontact .tbcontact {
+  width: 100%;
+  margin: 0 auto;
+}
+.tbcontact > tbody > tr > td > input {
+  width: 100%;
+}
+
+.tbcontact > tbody > tr > td {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.divcontact > h2 {
+  padding-left: 16px;
+}
+
+/* footer */
+#footer {
+  background: #d8d2cb;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  width: 100%;
+  border-top: 1px solid white;
+  justify-content: center;
+  align-items: center;
+}
+
+    </style>
+</head>
+<body>
+    <nav >
+        <div class="search">
+            <input type="search" class="input">
+        </div>
+        <ul class="nav-bar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#porfolio">Portfolio</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#service">Our Service</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </ul>
+    </nav>
+    <!--Start main section-->
+    <main>
+        <table width="100%" class="tbslide-one"  cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <div class="content">
+                    <h1>We help you to solve your<br>
+                        Business Problem</h1><br><br>
+                    <button>Read More</button>
+                    </div>
+                </td>
+                <td> <img class="main" src="/main.jpg" alt="" ></td>
+            </tr>
+            
+        </table>
+        </main>
+        <!-- Start  Porfolio section -->
+    <div id="porfolio">
+        <h2>Porfolio</h2>
+        <div class="grid">
+                <img src="https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_960_720.jpg" alt="Sample photo">
+                <img src="https://cdn.pixabay.com/photo/2019/08/19/07/45/dog-4415649_960_720.jpg" alt="Sample photo">
+                <img src="https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_960_720.jpg" alt="Sample photo">
+                <img src="https://cdn.pixabay.com/photo/2016/02/18/18/37/puppy-1207816_960_720.jpg" alt="Sample photo">
+                <img src="https://cdn.pixabay.com/photo/2016/02/19/15/46/labrador-retriever-1210559_960_720.jpg" alt="Sample photo">
+                <img src="https://cdn.pixabay.com/photo/2019/11/18/00/38/dog-4633734_960_720.jpg" alt="Sample photo">
+                 <img src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg" alt="Sample photo">
+                <img src="https://cdn.pixabay.com/photo/2019/05/10/13/21/husky-4193503_960_720.jpg" alt="Sample photo">     
+    </div>
+    </div>
+    <!-- End  Porfolio section -->
+        <!--End main section-->>
+    <!--Start Our Team section-->
+    <div id="team">
+        <h2>Our Team</h2>
+        <div class="tbteam">
+            <table width="100%" align="center">
+                <tr>
+                    <td align="center">
+                        <a href=""> <img src="/fong.png" alt="" width="180"></a>
+                        <h3><b>TongFong</b></h3>
+                        <span>Frontend Developer</span>
+                    </td>
+                    <td align="center">
+                        <a href=""><img src="/roza.jpg" alt="" width="180"></a>
+                        <h3><b>Roza</b></h3>
+                        <span>Frontend Developer</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+     <!--End Our Team section-->
+     <!--Start Our Service section-->
+     <div id="service">
+        <h2>Our Service</h2>
+        <div class="tbservice">
+            <table width="100%" align="center">
+                <tr>
+                    <td align="center">
+                        <a href=""> <i class="fa-solid fa-mobile-screen-button"></i></a>
+                        <h3><b>Digital Services</b></h3><br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda pariatur ad nulla doloribus! Saepe, ducimus sint quas non inventore eum atque beatae tempore. Itaque doloribus eius sunt quo assumenda!</p>
+                    </td>
+                    <td align="center">
+                        <a href=""><i class="fa-solid fa-earth-americas"></i></a>
+                        <h3><b>Creative Idea</b></h3><br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, excepturi omnis at esse soluta ipsum hic. Voluptatem, eligendi dolore. Ex sapiente dolorum soluta et iste facilis aspernatur magni, perferendis delectus.</p>
+                    </td>
+                    <td align="center">
+                        <a href=""><i class="fa-solid fa-house"></i></a>
+                        <h3><b>Interior Design</b></h3><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex laborum voluptatibus impedit officia quis reiciendis assumenda vel dignissimos! Sequi corrupti quo, eius repellat exercitationem minus expedita nihil natus veniam explicabo.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <a href=""><i class="fa-solid fa-signal"></i></a>
+                        <h3><b>Online Service</b></h3><br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae asperiores libero quam ea optio earum at aperiam labore. Dignissimos voluptatem tenetur harum optio molestiae, commodi temporibus voluptate voluptates facere.</p>
+                    </td>
+                    <td align="center">
+                        <a href=""><i class="fa-solid fa-envelope-open"></i></a>
+                        <h3><b>Unlimited Support </b></h3><br>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum assumenda alias at labore reprehenderit, magni natus magnam distinctio eligendi, perspiciatis cupiditate facere? Laborum soluta eligendi mollitia vel unde velit minus.</p>
+                    </td>
+                    <td align="center">
+                        <a href=""><i class="fa-solid fa-camera"></i></a>
+                        <h3><b>Photography</b></h3><br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nam quia odit placeat vero quisquam sequi, aut corrupti? Esse maiores mollitia obcaecati vero commodi? Deleniti fugiat numquam fugit architecto alias!</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+     <!--End Our Service section-->
+      <!-- Start contact section -->
+      <div id="contact">
+    <div class="divcontact">
+        <h2>Contact Us</h2>
+        <form action="">
+        <table class="tbcontact" >
+            <tr>
+                <td>
+                    <label for="">First Name</label><br>
+                    <input type="text" required>
+                </td>
+                <td>
+                    <label for="">Last Name</label><br>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Phone Number</label><br>
+                    <input type="text" required>
+                </td>
+                <td>
+                    <label for="">Date</label><br>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="">Massage</label><br>
+                    <textarea name="" id="" cols="87" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button>Send</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    </div>
+    </div>
+    <!-- End contact section -->
+    <!-- Start footer section -->
+    <div id="footer">
+        <p>Website create with by TEAM5</p>
+    </div>
+
+    <!-- End footer section -->
+
+</body>
+</html>
